@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartvizit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .card {
+      width: 380px;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      border: 1px solid #2a2a2a;
+      padding: 50px 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      animation: fadeIn 1s ease;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.07), transparent 70%);
+    }
+    .avatar {
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a84c, #8b6914);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; color: #0a0a0a; font-weight: 600;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 300;
+      color: #f0e8d5; letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .title {
+      font-size: 10px; letter-spacing: 4px;
+      color: #c9a84c; text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, #c9a84c, transparent);
+      margin-bottom: 28px;
+    }
+    .info { display: flex; flex-direction: column; gap: 12px; }
+    .info-item {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 12px; color: #888; font-weight: 200;
+      letter-spacing: 1px;
+    }
+    .info-item span:first-child { color: #c9a84c; font-size: 14px; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">AY</div>
+    <h1>Ahmet Yılmaz</h1>
+    <div class="title">Yazılım Mimarı</div>
+    <div class="divider"></div>
+    <div class="info">
+      <div class="info-item"><span>✉</span><span>ahmet@ornek.com</span></div>
+      <div class="info-item"><span>☎</span><span>+90 555 123 45 67</span></div>
+      <div class="info-item"><span>⌖</span><span>İstanbul, Türkiye</span></div>
+      <div class="info-item"><span>⬡</span><span>linkedin.com/in/ahmetyilmaz</span></div>
+    </div>
+  </div>
+</body>
+</html>
